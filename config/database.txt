@@ -1,0 +1,6 @@
+/*
+  Rename this file with your DB
+ */
+module.exports = {
+  remoteUrl:'mongodb://{DBUSER}:{DBPASS}@{DBHOST}:{PORT}/{DBNAME}'
+};

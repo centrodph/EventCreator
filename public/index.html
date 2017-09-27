@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event App Example</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+		<div class="">
+				<h1>Events</h1>
+		</div>
+		<div ng-view></div>
+	</div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>	
+	<script src="js/controllers/main.js"></script>
+	<script src="js/controllers/show.js"></script>
+	<script src="js/services/event.js"></script>
+	<script src="js/core.js"></script>
+</body>
+</html>

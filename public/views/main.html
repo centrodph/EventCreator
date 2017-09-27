@@ -1,0 +1,55 @@
+<div id="event-list" class="row">
+  <div class="col-sm-6 ">
+    <form>
+      <div class="form-group">
+        <label>Template ID</label>
+        <input type="text" class="form-control" required
+        placeholder="Template ID" ng-model="formData.templateId">
+      </div>
+      <div class="form-group">
+        <label>Event Name</label>
+        <input type="text" class="form-control" required
+        placeholder="Event Name" ng-model="formData.name">
+      </div>
+      <div class="form-group">
+        <label>Event Description</label>
+        <textarea  class="form-control" required
+        placeholder="Event Description" ng-model="formData.description" />
+      </div>
+      <div class="form-group">
+        <label>Event Date</label>
+        <textarea  class="form-control" required
+        placeholder="Event Date" ng-model="formData.date" ></textarea>
+      </div>
+      <div class="form-group">
+        <label>Event Time</label>
+        <input type="text"  class="form-control" required
+        placeholder="Event Time" ng-model="formData.time" />
+      </div>
+      <div class="form-group">
+        <label>Contact Email</label>
+        <input type="email"  class="form-control" required
+        placeholder="Contact Email" ng-model="formData.contactEmail" />
+      </div>
+      <div class="form-group">
+        <label>Contact Number</label>
+        <input type="text"  class="form-control" required
+        placeholder="Contact Number" ng-model="formData.contactNumber" />
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+    </form>
+  </div>
+  <div class="col-sm-6 ">
+    <span class="label label-info">Count: {{ events.length }}</span>
+    <p class="text-center" ng-show="loading">
+      <span class="fa fa-spinner fa-spin fa-3x"></span>
+    </p>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="event in events">
+        <label>
+          <a href="#!event/{{event._id}}"> {{ event.name }}</a>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
