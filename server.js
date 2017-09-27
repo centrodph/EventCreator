@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 // configuration
-mongoose.connect(database.remoteUrl);
+var mongoUrl = process.env.MONGO_URL || database.remoteUrl;
+mongoose.connect(mongoUrl);
 
 app.use(express.static('./public'));
 app.use(morgan('dev'));
